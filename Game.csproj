@@ -153,8 +153,10 @@
     <Compile Include="Engine\CharacterClasses\Player.cs" />
     <Compile Include="Engine\Monsters\MonsterFactories\MonsterFactory.cs" />
     <Compile Include="Engine\Monsters\MonsterFactories\RatFactory.cs" />
+    <Compile Include="Engine\Monsters\MonsterFactories\WizardFactory.cs" />
     <Compile Include="Engine\Monsters\Rat.cs" />
     <Compile Include="Engine\Monsters\RatEvolved.cs" />
+    <Compile Include="Engine\Monsters\Wizard.cs" />
     <Compile Include="Engine\SaveData.cs" />
     <Compile Include="Engine\Skills\BasicSpells\FireArrow.cs" />
     <Compile Include="Engine\Skills\BasicSpells\FireArrowDecorator.cs" />

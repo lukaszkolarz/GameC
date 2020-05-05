@@ -30,7 +30,7 @@ namespace Game.Engine.Monsters
 
         public override List<StatPackage> BattleMove()
         {
-            if (strategy.Equals("superPower") && Stamina >= 30 && MagicPower >= 30)
+            if (strategy.Equals("superPower") && stamina >= 30 && magicPower >= 30)
             {
                 stamina -= 30;
                 magicPower -= 30;
@@ -44,35 +44,36 @@ namespace Game.Engine.Monsters
                         "At the end, water flows and damages you " + MagicPower / 10 + " hp")
                 };
             }
-            else if (strategy.Equals("casual") && Stamina >= 10 && Strength >= 1 && MagicPower >= 10)
+            else if (strategy.Equals("casual") && stamina >= 10 && strength >= 1 && magicPower >= 10)
             {
                 stamina -= 10;
                 strength -= 1;
                 magicPower -= 10;
                 return new List<StatPackage>()
                 {
-                    new StatPackage("fire", 2 * wizardLevel,
-                        "Wizard attack with fire taking " + 2 * wizardLevel + " hp"),
+                    new StatPackage("fire", 10 * wizardLevel,
+                        "Wizard attack with fire taking " + 10 * wizardLevel + " hp"),
                     new StatPackage("air", 0, 10, 0, 0, wizardDegree,
                         "Attack with air. Taking 10 strength and " + wizardDegree + " magic"),
                     new StatPackage("earth", 0, 0, wizardLevel * 5, 0, 0,
                         "Ending attack with taking " + wizardLevel * 5 + " armory")
                 };
             }
-            else if (strategy.Equals("unarmed") && Stamina >= 15 && Strength >= 3)
+            else if (strategy.Equals("unarmed") && stamina >= 15 && strength >= 3)
             {
                 stamina -= 15;
                 strength -= 3;
                 
                 return new List<StatPackage>()
                 {
-                    new StatPackage("cut", 3, 2, 2, 2, 0,  
+                    new StatPackage("cut", 9, 2, 2, 2, 0,  
                         "Attack without magic")
                 };
             }
             else if (strategy.Equals("weak"))
             {
-                
+                stamina -= 10;
+                magicPower -= 10;
                 return new List<StatPackage>()
                 {
                     new StatPackage("water", 4*wizardDegree, 0, 0, 0, wizardLevel*4,
@@ -90,15 +91,15 @@ namespace Game.Engine.Monsters
         {
             int rnd = Index.RNG(0, 5);
             base.React(packs);
-            if (Health < 5 && Stamina >= 30 && wizardDegree >= 2 & rnd >= 3)
+            if (Health < 5 && Stamina >= 30 && wizardDegree >= 2 & rnd >= 2)
             {
                 strategy = "superPower";
             }
-            else if (MagicPower <= 2 && rnd >=3)
+            else if (MagicPower <= 2 && rnd >=2)
             {
                 strategy = "unarmed";
             }
-            else if (rnd < 3)
+            else if (rnd < 2 && magicPower >= 10)
             {
                 strategy = "weak";
             }

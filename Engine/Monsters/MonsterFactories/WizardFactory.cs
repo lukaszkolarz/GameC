@@ -1,5 +1,8 @@
+using System;
+
 namespace Game.Engine.Monsters.MonsterFactories
 {
+    [Serializable]
     public class WizardFactory: MonsterFactory
     {
         private int encounterNumber = 0;

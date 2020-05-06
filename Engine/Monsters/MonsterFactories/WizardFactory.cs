@@ -14,7 +14,7 @@ namespace Game.Engine.Monsters.MonsterFactories
                 encounterNumber++;
                 return new Wizard(wizardDegree, playerLevel);
             }
-            else return null; // no more rats to fight
+            else return null;
         }
         public override System.Windows.Controls.Image Hint() 
         {

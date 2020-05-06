@@ -16,7 +16,7 @@ namespace Game.Engine.Monsters
             Precision = 30;
             MagicPower = 50;
             Stamina = 100;
-            XPValue = 30;
+            XPValue = 50;
             Name = "monster0004";
             BattleGreetings = "BUUUUU";
             strategy = "casual";

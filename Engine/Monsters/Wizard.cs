@@ -22,7 +22,7 @@ namespace Game.Engine.Monsters
             Precision = 50 + 10 * wizardDegree;
             MagicPower = 50 * wizardDegree;
             Stamina = 50;
-            XPValue = 40 + wizardLevel + wizardDegree * 5;
+            XPValue = 20 + wizardLevel + wizardDegree * 5;
             Name = "monster0003";
             BattleGreetings = "Let me charm u!";
             strategy = "normal";

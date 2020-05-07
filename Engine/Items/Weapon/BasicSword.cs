@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.Engine.Items
+namespace Game.Engine.Items.Weapon
 {
     [Serializable]
     class BasicSword : Sword

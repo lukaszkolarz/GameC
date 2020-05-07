@@ -4,10 +4,11 @@ using System.Collections.Generic;
 namespace Game.Engine.Monsters
 {
     [Serializable]
-    public class TheGroke: Monster
+    public class TheGroke : Monster
     {
         private String strategy;
         private int theGrokeLevel;
+
         public TheGroke(int theGrokeLevel)
         {
             Health = 150;
@@ -25,7 +26,7 @@ namespace Game.Engine.Monsters
 
         public override List<StatPackage> BattleMove()
         {
-            
+
             if (strategy.Equals("casual") && Stamina >= 10 && Strength >= 1)
             {
                 Stamina -= 10;
@@ -34,9 +35,9 @@ namespace Game.Engine.Monsters
                 return new List<StatPackage>()
                 {
                     new StatPackage("cut", 10 * theGrokeLevel,
-                        "The Groke cuts ant takes " + 10 * theGrokeLevel + " hp"),
-                    new StatPackage("air", 0, 0, 10, 0, theGrokeLevel*2,
-                        "Attack with air. Taking 10 armor and" + theGrokeLevel*2 + " magic"),
+                        "The Groke cuts and takes " + 10 * theGrokeLevel + " hp"),
+                    new StatPackage("air", 0, 0, 10, 0, theGrokeLevel * 2,
+                        "Attack with air. Taking 10 armor and " + theGrokeLevel * 2 + " magic"),
                 };
             }
             else if (strategy.Equals("freeze") && MagicPower >= 10 && Stamina >= 8)
@@ -46,7 +47,8 @@ namespace Game.Engine.Monsters
                 return new List<StatPackage>()
                 {
                     new StatPackage("water", 8 * theGrokeLevel, 0, 0, 5, 15 * theGrokeLevel,
-                        "Freezing all around and takes " + 8 * theGrokeLevel + " hp and " + 15 * theGrokeLevel + " magic")
+                        "Freezing all around and takes " + 8 * theGrokeLevel + " hp and " + 15 * theGrokeLevel +
+                        " magic")
                 };
             }
             else if (strategy.Equals("spell") && MagicPower >= 20 && Stamina >= 10)
@@ -77,7 +79,7 @@ namespace Game.Engine.Monsters
                 };
             }
         }
-        
+
 
         public override void React(List<StatPackage> packs)
         {
@@ -95,10 +97,12 @@ namespace Game.Engine.Monsters
 
                 if (pack.HealthDmg >= 35)
                     strategyList.Add("freeze");
-                else if (Health <= 10 && pack.HealthDmg <= 10)
+                else if (Health == 20 && pack.HealthDmg <= 20)
                     strategyList.Add("rest");
                 else if (pack.MagicPowerDmg <= 15)
                     strategyList.Add("spell");
+                else
+                    strategyList.Add("casual");
             }
 
             int rnd = Index.RNG(0, strategyList.Count);

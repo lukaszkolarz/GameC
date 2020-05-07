@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.Engine.Items
+namespace Game.Engine.Items.Weapon
 {
     [Serializable]
-    class BasicAxe : Axe
+    class BasicSpear : Spear
     {
-        // simple axe
-        public BasicAxe() : base("item0003")
+        // simple spear
+        public BasicSpear() : base("item0002") 
         {
-            StrMod = 10;
+            PrMod = 5;
             GoldValue = 10;
-            PublicName = "Basic Axe"; 
+            PublicName = "Basic Spear"; 
         }
     }
 }

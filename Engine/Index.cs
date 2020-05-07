@@ -7,6 +7,7 @@ using Game.Engine.Items.ItemFactories;
 using Game.Engine.Items.BasicArmor;
 using Game.Engine.Interactions;
 using Game.Engine.Interactions.InteractionFactories;
+using Game.Engine.Items.Weapon;
 
 namespace Game.Engine
 {
@@ -32,12 +33,16 @@ namespace Game.Engine
             new SteelArmor(),
             new AntiMagicArmor(),
             new BerserkerArmor(),
-            new GrowingStoneArmor()
+            new GrowingStoneArmor(),
+            new Wand(),
+            new MinthrilArmor(),
+            new SuperSword()
         };
 
         private static List<ItemFactory> itemFactories = new List<ItemFactory>()
         {
-            new BasicArmorFactory()
+            new BasicArmorFactory(),
+            new WeaponFactory()
         };
 
         private static List<MonsterFactory> monsterFactories = new List<MonsterFactory>()

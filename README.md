@@ -21,6 +21,7 @@ The Groke is a globally known monster from "The Moomins". It scares every childr
 * Freeze - used if received damage is high enough
 * Rest - used to improve health
 * Spell - used if the magic attack was low enough
+* Casual - default move
 
 Movement variants are added to special container, then one of them is drawn.
 

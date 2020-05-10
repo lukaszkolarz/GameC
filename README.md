@@ -35,4 +35,8 @@ This item improves player's health and stamina but main power is it increases ne
 
 #### Wand
 Wand is a magical artifact which gives more resistance to magical attacks, improves player's magic ad health and increases power of taking opponent's magical power.
+
+### New Skills
+
+#### Pierwszy skill
   

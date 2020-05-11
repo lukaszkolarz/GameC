@@ -6,14 +6,14 @@ using Game.Engine.CharacterClasses;
 namespace Game.Engine.Skills.EnhancedMoves
 {
     [Serializable]
-    public class AvadaKedavraDeacorator : SkillDecorator
+    public class AxeAvadaKedavraDeacorator : SkillDecorator
     {
-        public AvadaKedavraDeacorator(Skill skill) : base("Avada Kedavra", 50, 6, skill)
+        public AxeAvadaKedavraDeacorator(Skill skill) : base("Axe Avada Kedavra", 50, 6, skill)
         {
             MinimumLevel = Math.Max(1, skill.MinimumLevel) + 3;
             PublicName = "COMBO - Avada Kedavra: you have 10% chances to double damage [fire] AND " +
                          decoratedSkill.PublicName.Replace("Combo: ", "");
-            RequiredItem = "Staff";
+            RequiredItem = "Axe";
         }
 
         public override List<StatPackage> BattleMove(Player player)
@@ -24,7 +24,7 @@ namespace Game.Engine.Skills.EnhancedMoves
             if (random >= (range - 5) && random <= (range + 5))
             {
                 response.HealthDmg = player.Strength;
-                response.CustomText = "You use doubled Avada Kedevra (" + player.Strength + " fire damage)";
+                response.CustomText = "You use doubled Axe Avada Kedevra (" + player.Strength + " fire damage)";
             }
             else
             {

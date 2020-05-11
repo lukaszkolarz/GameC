@@ -8,13 +8,22 @@ namespace Game.Engine.Skills.SkillFactories
     {
         public Skill CreateSkill(Player player)
         {
+            Skill skill;
             List<Skill> playerSkills = player.ListOfSkills;
-            List<Skill> known = CheckContent(playerSkills);
-            Skill skill = known[Index.RNG(0, known.Count)];
+            List<Skill> known = CheckContent(playerSkills);        //checks what enhanced skills player has
+            int random = Index.RNG(0, 3);
+            if (random <= known.Count)
+            {
+                skill = known[random];
+            }
+            else
+            {
+                skill = known[random];
+            }
             if (skill == null)
             {
                 AggressiveSword u1 = new AggressiveSword();
-                AvadaKedavra u2 = new AvadaKedavra();
+                AxeAvadaKedavra u2 = new AxeAvadaKedavra();
                 MagicSpear u3 = new MagicSpear();
 
                 List<Skill> temp = new List<Skill>();
@@ -36,9 +45,9 @@ namespace Game.Engine.Skills.SkillFactories
                     if (c1.MinimumLevel <= player.Level) 
                         return c1;
                 }
-                else if (skill is AvadaKedavra)
+                else if (skill is AxeAvadaKedavra)
                 {
-                    AvadaKedavraDeacorator c2 = new AvadaKedavraDeacorator(skill);
+                    AxeAvadaKedavraDeacorator c2 = new AxeAvadaKedavraDeacorator(skill);
                     if (c2.MinimumLevel <= player.Level) 
                         return c2;
                 }
@@ -58,9 +67,8 @@ namespace Game.Engine.Skills.SkillFactories
             List<Skill> temp = new List<Skill>();
             foreach (Skill skill in skills)
             {
-                if (skill is AggressiveSword || skill is AvadaKedavra || skill is MagicSpear) 
+                if (skill is AggressiveSword || skill is AxeAvadaKedavra || skill is MagicSpear) 
                     temp.Add(skill);
-                temp.Add(null);
             }
             return temp;
         } 

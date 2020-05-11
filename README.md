@@ -45,7 +45,7 @@ All undermentioned skills can be found in ~/Engine/Skills/EnhancedMoves
 This skill requires item "sword" and is enhanced version of cutting with sword (more damage). Minimum required level is 3. This skill decorator adds extra damages caused by magic.
 
 #### Avada Kedavra
-This spell gives opponent 100% attacking player's strength damage caused by magic(staff s required). Minimum required is 6. Combo of this spell gives player 10% chance to double damages. 
+This skill gives opponent 100% attacking player's strength damage caused by magic axe (axe s required). Minimum required is 6. Combo of this skill gives player 10% chance to double damages. 
 
 #### Magic Spear
 Magic Spear is new way to attack with spear using magic. Minimal level is 3, a spear is required. Combo gives 80% more precision.

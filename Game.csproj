@@ -173,8 +173,8 @@
     <Compile Include="Engine\Skills\BasicWeaponMoves\SwordSlash.cs" />
     <Compile Include="Engine\Skills\EnhancedMoves\AggressiveSword.cs" />
     <Compile Include="Engine\Skills\EnhancedMoves\AggressiveSwordDecorator.cs" />
-    <Compile Include="Engine\Skills\EnhancedMoves\AvadaKedavra.cs" />
-    <Compile Include="Engine\Skills\EnhancedMoves\AvadaKedavraDeacorator.cs" />
+    <Compile Include="Engine\Skills\EnhancedMoves\AxeAvadaKedavra.cs" />
+    <Compile Include="Engine\Skills\EnhancedMoves\AxeAvadaKedavraDeacorator.cs" />
     <Compile Include="Engine\Skills\EnhancedMoves\MagicSpear.cs" />
     <Compile Include="Engine\Skills\EnhancedMoves\MagicSpearDecorator.cs" />
     <Compile Include="Engine\Skills\Skill.cs" />

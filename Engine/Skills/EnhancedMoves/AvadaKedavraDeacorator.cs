@@ -23,8 +23,8 @@ namespace Game.Engine.Skills.EnhancedMoves
             int random = Index.RNG(0, 100);
             if (random >= (range - 5) && random <= (range + 5))
             {
-                response.HealthDmg = 2 * player.Strength;
-                response.CustomText = "You use doubled Avada Kedevra (" + 2 * player.Strength + " fire damage)";
+                response.HealthDmg = player.Strength;
+                response.CustomText = "You use doubled Avada Kedevra (" + player.Strength + " fire damage)";
             }
             else
             {

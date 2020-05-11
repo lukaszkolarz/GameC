@@ -39,5 +39,15 @@ Wand is a magical artifact which gives more resistance to magical attacks, impro
 
 ### New Skills
 
-#### Pierwszy skill
-  
+All undermentioned skills can be found in ~/Engine/Skills/EnhancedMoves
+
+#### Aggressive Sword
+This skill requires item "sword" and is enhanced version of cutting with sword (more damage). Minimum required level is 3. This skill decorator adds extra damages caused by magic.
+
+#### Avada Kedavra
+This spell gives opponent 100% attacking player's strength damage caused by magic(staff s required). Minimum required is 6. Combo of this spell gives player 10% chance to double damages. 
+
+#### Magic Spear
+Magic Spear is new way to attack with spear using magic. Minimal level is 3, a spear is required. Combo gives 80% more precision.
+
+In ~/Engine/Skills/SkillsFactories appeared new factory which produces new skills/combos dependent on actual player skills.

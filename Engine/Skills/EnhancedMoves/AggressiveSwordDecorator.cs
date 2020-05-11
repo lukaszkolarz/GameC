@@ -19,7 +19,7 @@ namespace Game.Engine.Skills.EnhancedMoves
         {
            StatPackage response = new StatPackage("air");
            response.HealthDmg = (int) (0.5 * player.MagicPower);
-           response.CustomText = "You use Aggressive Sword! (" + (int) (0.5 * player.MagicPower) + " cut damage)";
+           response.CustomText = "You use Aggressive Sword! (" + (int) (0.5 * player.MagicPower) + " air damage)";
            List<StatPackage> combo = decoratedSkill.BattleMove(player);
            combo.Add(response);
            return combo;

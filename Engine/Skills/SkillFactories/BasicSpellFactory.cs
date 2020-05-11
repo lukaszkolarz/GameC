@@ -24,6 +24,7 @@ namespace Game.Engine.Skills.SkillFactories
                 if (s2.MinimumLevel <= player.Level) tmp.Add(s2);
                 if (s3.MinimumLevel <= player.Level) tmp.Add(s3);
                 if (tmp.Count == 0) return null;
+                Console.WriteLine(tmp.Count);
                 return tmp[Index.RNG(0, tmp.Count)]; // use Index.RNG for safe random numbers
             }
             else if (known.decoratedSkill == null) // a BasicSpell has been already learned, use decorator to create a combo

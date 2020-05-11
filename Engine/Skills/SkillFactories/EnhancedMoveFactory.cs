@@ -12,9 +12,9 @@ namespace Game.Engine.Skills.SkillFactories
             List<Skill> playerSkills = player.ListOfSkills;
             List<Skill> known = CheckContent(playerSkills);        //checks what enhanced skills player has
             int random = Index.RNG(0, 3);
-            if (random <= known.Count)
+            if (known.Count == 0 || known.Count == 3 || random > known.Count)
             {
-                skill = known[random];
+                skill = null;
             }
             else
             {
@@ -33,8 +33,10 @@ namespace Game.Engine.Skills.SkillFactories
                     temp.Add(u2);
                 if (u3.MinimumLevel <= player.Level) 
                     temp.Add(u3);
-
-                return temp[Index.RNG(0, temp.Count)];
+                if(temp.Count == 0)
+                    return null;
+                else
+                    return temp[Index.RNG(0, temp.Count)];
             }
             
             else if (skill.decoratedSkill is null)

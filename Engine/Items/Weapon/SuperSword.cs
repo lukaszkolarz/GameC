@@ -12,7 +12,7 @@ namespace Game.Engine.Items.Weapon
         public SuperSword() : base("item0010")
         {
             lastReceivedDamage = 0;
-            PublicName = "Diamond Sword";
+            PublicName = "SuperSword";
             PublicTip = "This sword increases damage HP by 40% of last received damage" +
                         "Also it improves owner's HP by 10 points but subtracts 10 points Stamina.";
             GoldValue = 120;

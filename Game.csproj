@@ -131,6 +131,15 @@
     <Compile Include="Engine\Interactions\Built-In\ShopInteraction.cs" />
     <Compile Include="Engine\Interactions\InteractionFactories\SkillForgetFactory.cs" />
     <Compile Include="Engine\Interactions\ListBoxInteraction.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\AllDiamondsListener.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\BlueDiamondQuest.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\DiamondQuest.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\DiamondQuestListener.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\EventManager.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\GreenDiamondQuest.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\IObserver.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\RedDiamondQuest.cs" />
+    <Compile Include="Engine\Interactions\WizardDiamonds\WizardEncounter.cs" />
     <Compile Include="Engine\Items\Axe.cs" />
     <Compile Include="Engine\Items\BasicArmor\AntiMagicArmor.cs" />
     <Compile Include="Engine\Items\BasicArmor\BerserkerArmor.cs" />

@@ -10,7 +10,7 @@ namespace Game.Engine.Interactions
     // listbox interaction means that the player can choose options displayed in a listboc form
 
     [Serializable]
-    abstract class ListBoxInteraction : Interaction
+    public abstract class ListBoxInteraction : Interaction
     {
         public ListBoxInteraction(GameSession ses) : base(ses) { }
         public override void Run()

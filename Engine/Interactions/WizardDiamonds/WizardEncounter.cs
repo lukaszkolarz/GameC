@@ -49,6 +49,7 @@ namespace Game.Engine.Interactions.WizardDiamonds
             else if (Visited >= 2)
             {
                 parentSession.SendText("\nOh, what a pity. I am not able to charm anymore. *crying*");
+                return;
             }
 
             parentSession.SendText("\nHello adventurer. I am the old wizard who lost all his diamonds. Now I " +
@@ -61,10 +62,10 @@ namespace Game.Engine.Interactions.WizardDiamonds
                 case 0:
                     Agree();
                     break;
-                case 2:
+                case 1:
                     Price();
                     break;
-                case 3:
+                case 2:
                     Exit();
                     break;
             }

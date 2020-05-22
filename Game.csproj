@@ -130,6 +130,7 @@
     <Compile Include="Engine\Interactions\InteractionFactories\InteractionFactory.cs" />
     <Compile Include="Engine\Interactions\Built-In\ShopInteraction.cs" />
     <Compile Include="Engine\Interactions\InteractionFactories\SkillForgetFactory.cs" />
+    <Compile Include="Engine\Interactions\InteractionFactories\WizardDiamondsFactory.cs" />
     <Compile Include="Engine\Interactions\ListBoxInteraction.cs" />
     <Compile Include="Engine\Interactions\WizardDiamonds\AllDiamondsListener.cs" />
     <Compile Include="Engine\Interactions\WizardDiamonds\BlueDiamondQuest.cs" />

@@ -7,7 +7,10 @@ namespace Game.Engine.Interactions.WizardDiamonds
     public class RedDiamondQuest : DiamondQuest
     {
 
-        public RedDiamondQuest(GameSession session, EventManager eventManager) : base(session, eventManager) {}
+        public RedDiamondQuest(GameSession session, EventManager eventManager) : base(session, eventManager)
+        {
+            Name = "interaction0006";
+        }
 
         protected override void RunContent()
         {

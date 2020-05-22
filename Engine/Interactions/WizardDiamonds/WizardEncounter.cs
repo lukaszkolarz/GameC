@@ -22,6 +22,7 @@ namespace Game.Engine.Interactions.WizardDiamonds
             this.eventManager = eventManager;
             listener = new AllDiamondsListener(this);
             eventManager.Subscribe(listener, "newDiamond");
+            Name = "interaction0005";
         }
 
         protected override void RunContent()

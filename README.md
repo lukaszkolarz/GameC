@@ -50,4 +50,11 @@ This skill gives opponent 100% attacking player's strength damage caused by magi
 #### Magic Spear
 Magic Spear is new way to attack with spear using magic. Minimal level is 3, a spear is required. Combo gives 80% more precision.
 
-In ~/Engine/Skills/SkillsFactories appeared new factory which produces new skills/combos dependent on actual player skills.
+In ./Engine/Skills/SkillsFactories appeared new factory which produces new skills/combos dependent on actual player skills.
+
+### New interaction
+#### Wizard - Diamond interaction
+There are 4 new interaction which interact each other - Wizard and 3 diamonds.
+
+Firstly, gamer has to go to wizard to interact whole mission. He finds out the wizard cannot charm because he lost all his diamonds. If player talk to wizard rightly, he/she will be asked to help with finding diamonds. 
+The purpose is to find all diamonds, fight monsters, answer some question and go back to wizard to claim a reward. 
